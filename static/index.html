@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#5db4ea">
+<title>Tammisaari Motocross</title>
+<link rel="stylesheet" href="/static/style.css?v=3">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="banner"></div>
+<button id="btnMute" class="mute" aria-label="Äänet päälle/pois">🔊</button>
+
+<div id="steer" class="hidden">
+  <button id="btnL" class="steerBtn" aria-label="Nokka ylös">◀</button>
+  <button id="btnR" class="steerBtn" aria-label="Nokka alas">▶</button>
+</div>
+
+<section id="menu" class="card">
+  <h1>Tammisaari<br> Motocross</h1>
+  <p class="sub">Hyppää mahdollisimman pitkälle!</p>
+  <p class="lbl">Valitse kuski</p>
+  <div id="riders"></div>
+  <p class="lbl">Kulkuneuvo</p>
+  <div id="vehicles"></div>
+  <div class="row mainrow">
+    <div class="track"><b>Tammisaari</b><small>muita ratoja tulossa</small></div>
+    <button id="btnContinue">Jatka</button>
+  </div>
+  <div class="row">
+    <button id="btnRecords" class="dark">🏆 Top 10</button>
+    <button id="btnSettings" class="dark">⚙ Asetukset</button>
+  </div>
+  <p class="hint">Vinkki: puhelimella peli toimii parhaiten vaakatilassa.</p>
+</section>
+
+<section id="startDock" class="dock hidden">
+  <h2 id="startTitle"></h2>
+  <p>Pidä START pohjassa, niin moottori käynnistyy.</p>
+  <button id="btnStart" class="big">START</button>
+  <div class="progress"><i id="holdBar"></i></div>
+</section>
+
+<section id="windDock" class="dock hidden">
+  <p><b>Odota sopivaa tuulta.</b> Vihreä on paras, punainen huonoin.</p>
+  <button id="btnGo" class="big">LÄHDE!</button>
+</section>
+
+<section id="result" class="card hidden"></section>
+<section id="modal" class="card hidden"></section>
+
+<script src="/static/game.js?v=3"></script>
+</body>
+</html>
